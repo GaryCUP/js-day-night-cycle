@@ -10,12 +10,20 @@ var hour = new Date().getHours();
 var sky  = $("#sky");
 
 /*
- * Now we'll create objects for each block of time, and store them in an array
- * And define a CSS class for each timeBlock
+ * Now we'll create objects for each block of time, and store
+ * them in an array. Then define a CSS class for each timeBlock.
+ * We have to define night twice because the clock doesn't know
+ * how to wrap around from 21:00 to 5:00. This could be accounted
+ * for with some math, but I don't feel like it.
  */
 var timeBlocks = [
-	{ // Night starts at 9pm/21:00 and ends at 5am/5:00
+	{ // Night starts at 9pm/21:00 and ends at 11pm/24:00
   	start: 21,
+    end:   24,
+    class: "night",
+  },
+  { // Night starts again at 12am/00:00 and ends at 5am/5:00
+    start: 0,
     end:   5,
     class: "night",
   },
