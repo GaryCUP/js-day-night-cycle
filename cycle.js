@@ -17,8 +17,8 @@ var sky  = $("#sky");
  * for with some math, but I don't feel like it.
  */
 var timeBlocks = [
-	{ // Night starts at 9pm/21:00 and ends at 11pm/24:00
-  	start: 21,
+  { // Night starts at 9pm/21:00 and ends at 11pm/24:00
+    start: 21,
     end:   24,
     class: "night",
   },
@@ -28,17 +28,17 @@ var timeBlocks = [
     class: "night",
   },
   { // Dawn starts at 6am/6:00 and ends at 10am/10:00
-  	start: 6,
+    start: 6,
     end:   10,
     class: "dawn",
   },
   { // Day starts at 11am/11:00 and ends at 4pm/16:00
-  	start: 11,
+    start: 11,
     end:   16,
     class: "day",
   },
   { // Dusk starts at 5pm/17:00 and ends at 8pm/20:00
-  	start: 17,
+    start: 17,
     end:   20,
     class: "dusk",
   }
@@ -53,9 +53,9 @@ var timeBlocks = [
  */
  
 for ( var i = 0; i < timeBlocks.length; i++ ) { /* 1 */
-	var timeOfDay = timeBlocks[i]; /* 2 */
+  var timeOfDay = timeBlocks[i]; /* 2 */
   
   if ( timeOfDay.start <= hour && hour <= timeOfDay.end ) { /* 3 */
-		sky.addClass(timeOfDay.class); /* 4 */
+    sky.addClass(timeOfDay.class); /* 4 */
   }
 }
