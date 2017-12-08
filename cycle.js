@@ -1,6 +1,5 @@
 /**
  * Day/Night Gradient Cycle
- * Requires jQuery
  */
 
 // Get the current hour; JS runs on the 24-hour clock
@@ -9,7 +8,7 @@ var hour = new Date().getHours();
 // Assign the element #sky to an easy-to-use variable
 var sky  = document.querySelector("#sky");
 
-/*
+/**
  * Now we'll create objects for each block of time, and store
  * them in an array. Then define a CSS class for each timeBlock.
  * We have to define night twice because the clock doesn't know
