@@ -6,8 +6,8 @@
 // Get the current hour; JS runs on the 24-hour clock
 var hour = new Date().getHours();
 
-// Assign the jQuery object #sky to an easy-to-use variable
-var sky  = $("#sky");
+// Assign the element #sky to an easy-to-use variable
+var sky  = document.querySelector("#sky");
 
 /*
  * Now we'll create objects for each block of time, and store
